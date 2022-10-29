@@ -1,0 +1,24 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  // "runArgs": ["--gpus", "all"],
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "none",
+      "installGradle": true
+    }//,
+    // "ghcr.io/devcontainers/features/desktop-lite:1": {
+    //   "version": "latest",
+    //   "password": "$PASSWORD_DEVCONTAINER"
+    //  }
+  },
+  "settings": {
+    "java.import.gradle.java.home": "/usr/lib/jvm/msopenjdk-current"
+  },
+  // "forwardPorts": [6080],
+  "containerEnv": {
+    "JAVA_HOME": "/usr/lib/jvm/msopenjdk-current"
+  },
+  "customizations": {
+    "vscode": {"extensions": ["vscjava.vscode-gradle"]}
+  }
+}
